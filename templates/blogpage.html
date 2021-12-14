@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<form action="{% url 'home:insert' %}" method="post">
+    {% csrf_token %}
+    <input type="date" name="date"><br><br>
+    <textarea name="blog" cols="30" rows="10" placeholder="Blog"></textarea><br><br>
+    <input type="submit" value="post">
+</form>
+</body>
+</html>
